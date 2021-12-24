@@ -1,0 +1,15 @@
+.layoutContentAdmin {
+    margin-top: 5rem;
+
+    .clearfix::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+    
+
+    .admin_search_input {
+        float: right;
+        margin-top: 2rem;
+    }
+}

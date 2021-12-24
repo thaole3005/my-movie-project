@@ -1,0 +1,56 @@
+@import "../../../../../style/style.scss";
+
+.lich_chieu {
+    max-width: 70vw;
+    background-color: $color-white;
+    margin: 0 auto;
+
+    @include tablet {
+        width: 100% !important;
+        max-width:100%;
+
+    }
+
+    .ant-tabs-tab {
+        color: $color-green !important;
+    }
+
+    .ant-tabs-left > .ant-tabs-content-holder > .ant-tabs-content > .ant-tabs-tabpane {
+        padding-left: 0;
+    }
+
+    .lichchieu_collapse {
+        display: flex;
+    }
+    .lichchieu_collapse {
+        &_adress {
+            margin-left: 10px;
+        }
+    }
+
+    .infor_phim_item {
+        width: 100%;
+        .lich_chieu_list {
+            .lich_chieu_span {
+                padding:7px;
+                border: 1px solid rgba(29, 233, 202, 0.5);
+                background-color: rgb(177, 171, 171);
+                border-radius:4px;
+                display: flex;
+                align-items: center;
+                a {
+                    color: white;
+                }
+
+                @include mobile {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+
+    .no_showtime {
+        color: $color-red;
+        text-align: center;
+    }
+}

@@ -1,0 +1,117 @@
+@import "../../../../style/style.scss";
+
+
+.ticket_room_container {
+   
+    .ticket_room_content {
+        .ticket_room_header {
+            padding: 20px;
+            &_info {
+                display: flex;
+                align-items: center;
+
+                .movie_info {
+                    margin-left: 16px;
+                }
+            }
+            .man_hinh {
+                margin-top: 2rem;
+                text-align: center;
+                img {
+                    max-width: 100%;
+                }
+            }
+
+            .time_booking {
+                margin-left: auto;
+            }
+        }
+
+
+    }
+
+    .ticket_room_seats_container {
+       padding: 10px;
+        .ticket_room_seats {
+
+            // width: 700px;
+            // margin: 0 auto;
+            .seat_row {
+                
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                span {
+                    font-size: $fs-18;
+                    font-weight: bold;
+                    color: $color-red;
+                    margin-right: 15px;
+                    width: 15px;
+                }
+            }
+
+        
+        }
+
+            
+        .datve_btn_small_screen {
+            button {
+                width: 100%;
+            }
+        }
+
+        .seat_note {
+            padding-top: 2rem;
+            
+            div {
+                text-align: center;
+            }
+        }
+    }
+}
+
+
+
+.ghe {
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: $color-ghe-thuong;
+    &:focus {
+        outline: none !important;
+    }
+    cursor: pointer;
+}
+.gheVip {
+    color: $color-ghe-vip !important;
+}
+
+
+.gheDangChon {
+    color: $color-ghe-dang-chon !important;
+    position: relative;
+    span.ten_ghe {
+        position: absolute;
+        font-size: 10px!important;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color:red !important;
+        margin: 0 !important;
+        width: auto !important;
+    }
+}
+
+.gheDaDat {
+    color: $color-ghe-da-dat !important;
+    cursor: not-allowed !important;
+}
+
+.gheToiDaDat {
+    color: $color-ghe-toi-da-dat !important;
+    cursor: not-allowed !important;
+}

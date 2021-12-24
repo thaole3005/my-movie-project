@@ -1,0 +1,28 @@
+@import "../../../../../style/style.scss";
+
+.movie_rating {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+
+    .CircularProgressbar {
+       max-height: 200px;
+       @include tablet {
+         max-height: 120px;
+      }
+    }
+
+ 
+
+    .rating_start_group {
+       display: flex;
+       justify-content: center;
+       align-items: center;
+
+       .half {
+         margin-left: 10px;
+         color: white;
+       }
+    }
+}

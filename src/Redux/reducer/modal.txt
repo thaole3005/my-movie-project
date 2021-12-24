@@ -1,0 +1,64 @@
+import { modalAntdType } from "../actionType/actionType";
+import React from 'react';
+
+const initialState = {
+    title: "Default title",
+    modalContent: <p>Default modal content</p>,
+    
+    submitCallback: () => {
+        alert("submitCallback nèee");
+    },
+    cancelCallback: () => {
+        alert("cancelCallback nèee");
+    },
+    loading: false,
+    visible: false,
+}
+
+export const modalAntdReducer = (state = initialState, { type, payload }) => {
+    switch (type) {
+
+    case modalAntdType.OPEN_MODAL_ANTD: {
+        console.log("vào case OPEN_MODAL_ANTD");
+        return {
+             ...state, 
+             visible: true,
+             title: payload.title,
+             modalContent,
+        };
+    }
+    case modalAntdType.CLOSE_MODAL_ANTD: {
+        return {
+             ...state, 
+             visible: false,
+        };
+    }
+
+    case modalAntdType.HANDLE_OK_MODAL_ANTD_WITH_LOADING: {
+        return {
+             ...state, 
+             visible: true,
+             loading: true,
+             submitCallback,
+        };
+    }
+    case modalAntdType.HANDLE_OK_MODAL_ANTD_NO_LOADING: {
+        return {
+             ...state, 
+             visible: false,
+             loading: false,
+             submitCallback,
+        };
+    }
+
+    case modalAntdType.CANCEL_MODAL_ANTD: {
+        return {
+             ...state, 
+             visible: false,
+             cancelCallback,
+        };
+    }
+    default:
+        return state
+    }
+}

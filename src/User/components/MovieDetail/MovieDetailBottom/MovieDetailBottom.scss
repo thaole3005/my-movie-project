@@ -1,0 +1,37 @@
+@import "../../../../style/style.scss";
+
+.moviebottom {
+    margin-top: 4rem;
+    padding-bottom: 4rem;
+    .moviebottom_container {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+    
+    .ant-tabs-top > .ant-tabs-nav::before {
+        border-bottom: none !important;
+    }
+
+    .ant-tabs-tab {
+        color: $color-white;
+        font-weight: 400;
+        &:hover {
+            color: $color-red !important;
+            // font-size: $fs-18;
+            transition: all 0.1s;
+        }
+      }
+
+    .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+        color: $color-red !important; 
+        font-weight: 600;
+        font-size: $fs-18;
+
+     }
+
+     .ant-tabs-ink-bar {
+        position: absolute;
+        background: $color-red !important;
+        pointer-events: none;
+     }
+}

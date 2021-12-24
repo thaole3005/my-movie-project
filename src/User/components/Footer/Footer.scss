@@ -1,0 +1,55 @@
+@import "../../../style/style.scss";
+
+
+.footer_container {
+    padding: 25px;
+    background-color:#222;
+    .col-lg-4 {
+        padding: 0 30px;
+    }
+    
+    .footer_top {
+        .footer_title {
+            @include styleText($color-white, $fs-18);
+            text-align: center;
+            text-transform: uppercase;
+        }
+        a {
+            @include styleText($dark-gray, $fs-14);
+            text-decoration: none;
+            transition: color 0.3s;
+            &:hover {
+                @include styleText($color-white, $fs-14);
+            }
+        }
+
+        .footer_section_doitac {
+
+            .partner_list {
+                flex-wrap: wrap;
+                display: flex;
+                    img {
+                        width: 30px;
+                        height: 30px;
+                        border-radius:50%;
+                    
+                }
+
+                .partner_item {
+                    padding: 2px;
+                    margin: 2px;
+                }
+            }
+        }
+        
+        .footer_icon {
+            display: flex;
+            justify-content: center;
+            img {
+                width: 30px;
+                height: 30px;
+                margin: 0 10px;
+            }
+        }
+    }
+}

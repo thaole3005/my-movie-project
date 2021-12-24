@@ -1,0 +1,100 @@
+@import "../../../../style/style.scss";
+
+
+.booking_result_section {
+    // margin-top: 70px;
+    // height: calc(100vh - 70px) !important;
+  
+    .booking_result_card {
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: calc(100vh - 60px);
+        
+        .booking_result_card_content {
+            width: 60%;
+            height: auto;
+            -webkit-box-shadow: -5px 0px 17px -1px rgba(0,0,0,0.58); 
+            box-shadow: -5px 0px 17px -1px rgba(0,0,0,0.58);
+            background-color: white;
+            padding: 20px;
+            h3 {
+                color: $color-red;
+            }
+            hr {
+                margin-top: 0.5rem;
+            }
+            .booking_movie_info {
+                display: flex;
+                align-items: center;
+                @include marginY(1rem);
+                .booking_movie_img {
+                    width: 30%;
+                    img {
+                        max-width:100%;
+                    }
+                }
+
+                .booking_movie_detail {
+                    margin-left: 2rem;
+                    width: 100%;
+                    .booking_detail_item {
+                      display: flex;
+                      p:first-child {
+                          width: 40%;
+                      }
+                      p:nth-child(2) {
+                          margin-left: auto;
+                      }
+                    }
+                }
+            }
+    
+            .booking_user_info {
+                text-align: center;
+                @include marginY(1rem);
+                h4 {
+                    color: $color-red;
+                }
+                .info_item {
+                    display: flex;
+                    p:first-child {
+                        width: 50%;
+                    }
+                }
+            }
+        }
+    }
+
+    .booking_action {
+        margin-top: 1rem;
+        display: flex;
+        justify-content:center;
+        margin-top: 20px;
+        .booking_button {
+            border: 2px solid $color-red;
+            @include styleButton($color-red, none, 6px, 10px, $border-radius);
+         
+
+                @include styleText($color-white, $fs-16);
+            a {
+                @include styleText($color-white, $fs-16);
+            }
+
+            &:hover {
+                @include btnHover($color-white, $color-red, $color-white);
+              
+
+                    @include styleText($color-red, $fs-16);
+                    a {
+                        @include styleText($color-red, $fs-16);
+                    }
+            }
+        }
+
+        .booking_button:nth-child(2) {
+            margin-left: 10px;
+        }
+    }
+}

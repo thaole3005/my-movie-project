@@ -1,0 +1,35 @@
+@import "../../../style/style.scss";
+
+.login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: url("https://www.logitheque.com/en/wp-content/uploads/sites/6/2019/07/netflix-image.jpg");
+  background-size: cover;
+
+  &-container {
+    width: 100%;
+  }
+
+  &-form {
+    background: $color-login;
+    @include paddingA(3rem);
+    border-radius: 0.5rem;
+
+    .ant-form-item-label label {
+      color: $color-white;
+    }
+
+    .form-register {
+      color: $color-white;
+    }
+
+    .form-button {
+      display: block;
+      width: 150px;
+      margin: 0 auto;
+      background: $color-button;
+    }
+  }
+}

@@ -1,0 +1,86 @@
+@import "../../../../style/style.scss";
+
+
+.layoutContent {
+    margin-top: 0;
+}
+
+.booking_progress_container {
+    // margin-top: 5rem;
+    width: 100%;
+    p{
+        margin-bottom: 0;
+    }
+    .booking_progress_content {
+        // position: fixed;
+        // z-index: 1000;
+        padding:20px;
+        // width: 100%;
+        top:0;
+        background-color:white;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        -webkit-box-shadow: 0px 22px 8px -14px rgba(0,0,0,0.42); 
+        box-shadow: 0px 22px 8px -14px rgba(0,0,0,0.42);
+        .tix_logo {
+            img {
+                width:50px;
+                height:50px;
+            }
+        }
+
+        .tix_progress {
+            display: flex;
+            height: 100%;
+            span {
+                font-size: $fs-20;
+            }
+            .step {
+                margin: 0 15px;
+                position: relative;
+                &::before{
+                    content: "";
+                    display: block;
+                    @include position(absolute,-20px );
+                    height: 4px;
+                    @media (max-width: 618px) {
+                        height: 12px;
+                    }
+                  
+                    width:0;
+                    background-color: $color-red;
+
+                }
+
+                &.step_active::before {
+                    width: 100%;
+                }
+            }
+        }
+
+        .ava_and_logout {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .logout_span {
+                cursor: pointer;
+                transition: color 0.3s;
+                &:hover {
+                  color: $color-red;
+                }
+            }
+        }
+
+    }
+}
+
+
+.booking_form_section {
+
+
+}
+
+

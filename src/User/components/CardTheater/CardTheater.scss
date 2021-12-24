@@ -1,0 +1,33 @@
+@import "../../../style/style.scss";
+
+.cardTheater {
+  .cardContainer {
+    max-width: 300px;
+
+    img {
+      width: 3.9rem;
+      height: 100%;
+    }
+
+    .cardContent {
+      text-align: left;
+      width: 190px;
+
+      h4 {
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+
+      p {
+        @include textStyle(0.75rem, $dark-gray, 300, none);
+        margin-bottom: 0;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+
+      a {
+        @include textStyle(0.75rem, $color-red, 300, none);
+      }
+    }
+  }
+}

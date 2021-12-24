@@ -1,0 +1,147 @@
+@import "../../../../style/style.scss";
+
+.booking_form_container {
+    position: relative;
+    height: 100%;
+
+    // box-shadow: 0 0 15px rgba(0, 0, 0,0.7);
+    -webkit-box-shadow: -5px 0px 17px -1px rgba(0,0,0,0.58); 
+    box-shadow: -5px 0px 17px -1px rgba(0,0,0,0.58);
+
+    .booking_form_content {
+       
+        .booking_form_info {
+          
+            padding: 16px;
+            ::-webkit-scrollbar {
+                background: red; 
+                border-radius: 10px;
+              }
+            .booking_total {
+                text-align: center;
+                padding: 20px 0;
+                h3 {
+                    color: $color-green;
+                }
+            }
+
+            .movie_info {
+                padding: 10px 0;
+            }
+            .ghe_da_chon_group, .chon_combo {
+                padding: 10px 0;
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .chon_combo {
+                justify-content: space-between;
+            }
+
+            .ghe_da_chon_group {
+                flex-wrap: wrap;
+                align-items: center;
+                div {
+                    width: 75%;
+                    span {
+                        color: $color-red;
+                    }
+                }
+                p.tong_gia_ghe {
+                   color: $color-green;
+                   margin-left: auto;
+                }
+
+            }
+
+            .tong_gia_combo {
+                color: $color-green;
+                
+            }
+
+            .uu_dai {
+                position: relative;
+                button.ap_dung_btn {
+                    @include position(absolute, 1px, null, 5px);
+                    padding: 2px !important;
+                    font-size: 14px;
+                }
+            }
+
+            .hinh_thuc_thanh_toan {
+                .radio_item {
+                    display: flex;
+                    align-items: center;
+                    input[type='radio'] {
+                        cursor: pointer;
+                        -webkit-appearance: none;
+                        background-color: #fff;
+                        width: 20px;
+                        height: 20px;
+                        border: 2px solid $color-red;
+                        border-radius: 50%;
+                        outline: 0;
+                        position: relative;
+
+                        &::before {
+                            content: "";
+                            display: none;
+                            @include position(absolute, 50%, 50%);
+                            transform: translate(-50%, -50%);
+                            width:70%;
+                            height:70%;
+                            border-radius: 50%;
+                            background-color:$color-red;
+                        }
+
+                        &:checked::before {
+                            display: block;
+                        }
+                    }
+                    .radio_item_label {
+                        margin-left: 10px;;
+                        display: flex;
+                        align-items: center;
+        
+                        .pay_img {
+                            width:40px;
+                            height:40px;
+                            img {
+                                max-width: 100%;
+                            }
+                            margin-right: 5px;
+                        }
+                    }
+                }
+            }
+            
+        }
+
+        .dat_ve {
+
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            height: 60px;
+           
+            button {
+                height: 100%;
+            }
+        }
+    }
+}
+
+
+
+.infor_booking_container {
+    .infor_booking_content {
+        display: flex;
+        .info_right {
+            margin-left: auto;
+        }
+    }
+}

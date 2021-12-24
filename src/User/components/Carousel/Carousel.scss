@@ -1,0 +1,54 @@
+@import "../../../style/style.scss";
+
+.carousel {
+  overflow: hidden;
+
+  &-item {
+    @include position(relative);
+    height: 80vh;
+
+    img {
+      @include position(absolute);
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &-play {
+    @include position(absolute, 50%, 50%);
+    @include cssPrefix(transform, translate(-50%, -50%));
+
+    img {
+      height: 5rem;
+      width: 5rem;
+      cursor: pointer;
+    }
+  }
+
+  .slick-dots {
+    bottom: 2rem;
+
+    button {
+      &::before {
+        font-size: 0.7rem;
+        color: $color-white;
+      }
+    }
+
+    .slick-active button {
+      &::before {
+        color: $color-red;
+      }
+    }
+  }
+
+  .slick-prev, .slick-next {
+    z-index: 10;
+  }
+  .slick-prev {
+    left: 20px;
+  }
+  .slick-next {
+    right: 20px;
+  }
+}

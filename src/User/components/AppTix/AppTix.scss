@@ -1,0 +1,90 @@
+@import "../../../style/style.scss";
+
+
+.app_tix_container {
+    background-image: url(../../../assets/img/backapp.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 6rem 0;
+    background-attachment: fixed;
+    position: relative;
+ 
+    .app_tix_row {
+        align-items: center;
+        .app_tix_left {
+            color: white;
+            h2 {
+                @include styleText($color-white, $fs-32);
+            }
+    
+            p.tix_description {
+                @include styleText($color-white,$fs-20);
+                @include marginY(15px);
+            }
+    
+            .btn_download {
+              
+                a {
+    
+                    @include styleText($color-white, $fs-18);
+                }
+                &:hover {
+                    a {
+    
+                        @include styleText($color-red, $fs-18);
+                    }
+                }
+            };
+    
+            a.tix_verson:nth-child(1) {
+                margin-left: 5px;
+                margin-right: 5px;
+                color: $color-red;
+                font-weight: bold;
+                font-size: $fs-18;
+                &:hover {
+                        @include styleText($color-white, $fs-18);
+                    
+                }
+            }
+            a.tix_verson:nth-child(2) {
+                margin-left: 5px;
+                color: $color-red;
+                font-weight: bold;
+                font-size: $fs-18;
+                &:hover {
+                        @include styleText($color-white, $fs-18);
+                  
+                }
+            }
+        };
+
+        .app_tix_right {
+            .phone {
+                width: 50%;
+                margin: 0 auto;
+                position: relative;
+                .phone_img {
+                    max-width: 100%;
+                }
+                .phone_slide {
+                    position: absolute;
+                    top: 11px;
+                    left: 7px;
+                    right: 7px;
+                    bottom: 15px;
+                    img.img_phone_slide {
+                        border-radius: 30px;
+                        max-width: 100%;
+                    }
+                }
+            }
+        
+            
+        }
+    }
+    
+}
+
+
+

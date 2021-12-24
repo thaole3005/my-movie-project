@@ -1,0 +1,21 @@
+@import "../../../style/style.scss";
+
+
+.common_button {
+    border: 2px solid $color-red;
+    cursor: pointer;
+    text-transform: uppercase;
+    @include styleButton($color-red, none, 8px, 15px, $border-radius);
+ 
+
+        @include styleText($color-white, $fs-18);
+  
+
+    &:hover {
+        @include btnHover($color-white, $color-red, $color-white);
+      
+
+            @include styleText($color-red, $fs-18);
+          
+    }
+}

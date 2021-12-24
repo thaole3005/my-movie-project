@@ -1,0 +1,48 @@
+@import "../../../../../style/style.scss";
+
+
+.danhgia {
+    .danh_gia_click {
+        background-color: $color-white;
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        p {
+            margin-bottom: 0 !important;
+        }
+
+        .white_user {
+            width: 35px;
+            height: 35px;
+            border-radius: 20px;
+        }
+        .start_group {
+            margin-left: auto;
+        }
+    }
+
+
+    .comment_group {
+        .comment_list {
+            .cmt_quantity {
+                color: $color-white;
+            }
+            .cmt_item{
+                background-color: $color-white;
+                margin-bottom: 1rem;
+                padding: 10px;
+
+                .cmt_content {
+                    display: flex;
+                   
+                    ul {
+                        margin-left: auto;
+                        display:flex;
+                    }
+                }
+            }
+        }
+    }
+}
+

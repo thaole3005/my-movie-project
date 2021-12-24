@@ -1,0 +1,14 @@
+@import "../../../style/style.scss";
+
+.tabContainer {
+  display: flex;
+  justify-content: center;
+  @include paddingY(2rem);
+
+  .multitab {
+    &-logo {
+      width: 3rem;
+      height: 3rem;
+    }
+  }
+}

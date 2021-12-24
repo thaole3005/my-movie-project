@@ -1,0 +1,30 @@
+@import "../../../style/style.scss";
+
+.orderticket {
+  display: flex;
+  justify-content: center;
+  @include position(relative);
+  width: 100%;
+  margin: 0 auto;
+
+  .order-search {
+    margin-top: -3.75rem;
+    @include paddingA(2rem);
+    box-shadow: 0px 1px 9px 1px $dark-gray;
+    background: $color-white;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    border-radius: 0.5rem;
+  }
+
+  .form-button {
+    margin-left: 1rem;
+    height: 100%;
+    @include textStyle(1rem, $dark-gray, 400, upperCase);
+  }
+
+  @include tablet {
+    display: none;
+  }
+}

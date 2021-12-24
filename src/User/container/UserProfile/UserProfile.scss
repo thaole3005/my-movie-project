@@ -1,0 +1,54 @@
+@import "../../../style/style.scss";
+
+.profile {
+  background: url("https://www.logitheque.com/en/wp-content/uploads/sites/6/2019/07/netflix-image.jpg");
+  height: 100vh;
+  overflow-x: hidden;
+
+  &-container {
+    @include paddingA(4rem);
+  }
+
+  &-detail {
+    @include marginY(2rem);
+    gap: 2rem;
+  }
+
+  &-title,
+  &-detail,
+  &-account {
+    @include paddingA(2rem);
+    background: $color-login;
+    @include textStyle(1rem, $color-white, 400, none);
+  }
+
+  &-form {
+    max-width: 400px;
+    margin: 0 auto;
+
+    .ant-form-item-label > label {
+      @include textStyle(1rem, $color-white, 400, none);
+    }
+  }
+}
+
+
+
+
+
+
+
+
+.profile-notdone {
+  background: url("https://www.logitheque.com/en/wp-content/uploads/sites/6/2019/07/netflix-image.jpg");
+  height: calc(100vh - 70px);
+  margin-top: 3rem;
+  // overflow-x: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  h2 {
+    color: white;
+  }
+
+}

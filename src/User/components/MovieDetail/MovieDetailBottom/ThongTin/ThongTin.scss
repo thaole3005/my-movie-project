@@ -1,0 +1,17 @@
+@import "../../../../../style/style.scss";
+
+.thongtin {
+    margin-top: 2rem;
+    color: $color-white;
+    h2 {
+        text-align: center;
+        color: $color-red;
+    }
+
+    @include tablet {
+        .thong_tin_first{
+            text-align: center;
+        }
+    }
+}
+

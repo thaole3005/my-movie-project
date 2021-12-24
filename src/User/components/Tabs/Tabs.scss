@@ -1,0 +1,19 @@
+@import "../../../style/style.scss";
+
+.tabs {
+  @include marginY(3rem);
+  @include paddingX(2rem);
+
+  .ant-tabs-tab-active .ant-tabs-tab-btn {
+    color: $color-red !important;
+    font-size: 1.3rem;
+  }
+
+  .ant-tabs-tab-btn {
+    font-size: 1.1rem;
+  }
+
+  .ant-tabs-ink-bar {
+    display: none;
+  }
+}

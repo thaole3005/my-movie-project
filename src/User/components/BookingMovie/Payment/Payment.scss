@@ -1,0 +1,9 @@
+@import "../../../../style/style.scss";
+
+
+.infor_payment {
+    display: flex;
+    &_right {
+        margin-left: auto;
+    }
+}

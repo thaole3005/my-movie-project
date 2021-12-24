@@ -1,0 +1,12 @@
+@import "../../../style/style.scss";
+
+.cardNews {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  @include paddingA(1rem);
+
+  .ant-card-cover img {
+    height: 200px;
+  }
+}

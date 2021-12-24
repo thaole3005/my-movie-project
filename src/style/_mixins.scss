@@ -1,0 +1,140 @@
+@mixin textStyle($fontsize, $textColor, $fontweight, $transform) {
+  font-size: $fontsize;
+  color: $textColor;
+  font-weight: $fontweight;
+  text-transform: $transform;
+}
+
+@mixin border($color, $width, $direction) {
+  @if ($direction == all) {
+    border: $width solid $color;
+  } @else {
+    border-#{$direction}: $width solid $color;
+  }
+}
+
+@mixin custom_container($width, $flag: null) {
+  @if ( $width == $desktop-width && flag== "bigger") {
+    max-width: 1000px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+  } @else if ( $width == $desktop-width && flag== "smaller") {
+    max-width: 800px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  @else if( $width == $tablet-width) {
+    max-width: 620px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+  } @else {
+    //mobile
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+
+  }
+}
+
+
+@mixin cssPrefix($prop, $value) {
+  -webkit-#{$prop}: $value;
+  -moz-#{$prop}: $value;
+  -ms-#{$prop}: $value;
+  -o-#{$prop}: $value;
+  #{$prop}: $value;
+}
+
+@mixin position($prop, $top: null, $left: null, $right: null, $bottom: null) {
+  position: $prop;
+  top: $top;
+  left: $left;
+  bottom: $bottom;
+  right: $right;
+}
+
+@mixin marginX($number) {
+  margin: 0 $number;
+}
+
+@mixin marginY($number) {
+  margin: $number 0;
+}
+
+@mixin marginA($number) {
+  margin: $number;
+}
+
+@mixin paddingX($number) {
+  padding-left: $number;
+  padding-right: $number;
+}
+
+@mixin paddingY($number) {
+  padding-top: $number;
+  padding-bottom: $number;
+}
+
+@mixin paddingA($number) {
+  padding: $number;
+}
+
+@mixin position($prop, $top: null, $left: null, $right: null, $bottom: null) {
+  position: $prop;
+  top: $top;
+  left: $left;
+  bottom: $bottom;
+  right: $right;
+}
+
+
+@mixin styleText($textColor, $fontSize) {
+  color: $textColor;
+  font-size: $fontSize;
+}
+@mixin styleButton($bgColor, $borderColor, $pd-y, $pd-x, $radius) {
+  background: $bgColor;
+  border: 1px solid $borderColor;
+  padding: $pd-y $pd-x;
+  border-radius: $radius;
+}
+
+@mixin btnHover($bgColor, $borderColor, $txtColor) {
+  background: $bgColor;
+  border-color: $borderColor;
+  color: $txtColor;
+  transition: all 0.3s;
+}
+
+
+@mixin mobile {
+  @media (max-width: #{$mobile-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: #{$tablet-width}) {
+    @content;
+  }
+}
+
+@mixin betwween-tablet-desktop {
+  @media (max-width: #{$desktop-width - 1}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
